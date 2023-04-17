@@ -1,7 +1,7 @@
 {
   "name": "react-scripts-labtheme",
-  "version": "1.0.0-lab.2",
-  "description": "Configuration and scripts for Create React WP Theme.",
+  "version": "1.0.0-lab.3",
+  "description": "Configuration and scripts for Create React LAB Theme.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ThiagoSGomes-Dev/create-react-labtheme-scripts.git",
@@ -94,7 +94,7 @@
     "webpack-dev-server": "3.10.3",
     "webpack-manifest-plugin": "2.2.0",
     "workbox-webpack-plugin": "4.3.1",
-    "@devloco/create-react-labtheme-utils": "^3.4.1-wp.1"
+    "create-react-labtheme-utils": "^1.0.0-lab.3"
   },
   "devDependencies": {
     "react": "^16.12.0",
