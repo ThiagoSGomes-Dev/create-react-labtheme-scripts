@@ -159,7 +159,7 @@ function startWatch() {
     } else {
       console.log(
         chalk.red(
-          `wpstart::injectLabThemeClient: ${clientConfig.file} was not found.`
+          `labstart::injectLabThemeClient: ${clientConfig.file} was not found.`
         )
       );
       process.exit();
@@ -197,7 +197,7 @@ function startWatch() {
       console.log('Nodejs watcher is exiting...');
       console.log(`${chalk.red('Your theme is not quite ready!')}`);
       console.log(
-        "Now go to your WP site's admin area and set the site's theme to this new theme."
+        "Now go to your LAB site's admin area and set the site's theme to this new theme."
       );
       console.log(
         `Then click "${chalk.cyan(
