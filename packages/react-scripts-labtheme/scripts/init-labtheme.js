@@ -32,12 +32,12 @@ const fnUpdateAppPackage = function(
   let aOriginalDirectory = originalDirectory.replace(/\\/g, '/').split('/');
   let originalThemeName = aOriginalDirectory[aOriginalDirectory.length - 1];
 
-  // Prefix the original create-react-app script rules with "cra"
+  // Prefix the original create-react-app script rules with "lab"
   // so that labtheme can take over the start and build commands.
-  const craCommandNames = ['build', 'eject', 'start', 'test'];
-  craCommandNames.forEach(commandName => {
+  const labCommandNames = ['build', 'eject', 'start', 'test'];
+  labCommandNames.forEach(commandName => {
     let scriptRule = appPackage.scripts[commandName];
-    appPackage.scripts['cra' + commandName] = scriptRule;
+    appPackage.scripts['lab' + commandName] = scriptRule;
     delete appPackage.scripts[commandName];
   });
 
@@ -47,8 +47,8 @@ const fnUpdateAppPackage = function(
   const commandNames = [
     buildCommandName,
     startCommandName,
-    'wpbuild',
-    'wpstart',
+    'labbuild',
+    'labstart',
   ];
   commandNames.forEach(commandName => {
     appPackage.scripts[`${commandName}`] = `labtheme-scripts ${commandName}`;
@@ -137,7 +137,7 @@ const fnFinish = function(
   console.log('Inside that directory, you can run several commands:');
   console.log();
   console.log(
-    "The original create-react-scripts commands are still available but must be prefixed with 'cra' (e.g. crastart, craeject, etc.)."
+    "The original create-react-scripts commands are still available but must be prefixed with 'lab' (e.g. labstart, labeject, etc.)."
   );
   console.log();
   console.log(chalk.cyan(`  ${displayedCommand} ${startCommandName}`));

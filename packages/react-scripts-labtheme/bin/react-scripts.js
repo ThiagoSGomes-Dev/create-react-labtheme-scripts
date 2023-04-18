@@ -24,7 +24,7 @@ const scriptIndex = args.findIndex(
 let script = scriptIndex === -1 ? args[0] : args[scriptIndex]; // labtheme -- change to "let" to allow modification...
 const nodeArgs = scriptIndex > 0 ? args.slice(0, scriptIndex) : [];
 
-script = script.replace(/cra/, ''); // labtheme -- added
+script = script.replace(/lab/, ''); // labtheme -- added
 
 if (['build', 'eject', 'start', 'test'].includes(script)) {
   const result = spawn.sync(

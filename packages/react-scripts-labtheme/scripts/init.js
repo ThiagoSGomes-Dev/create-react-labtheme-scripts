@@ -314,7 +314,7 @@ module.exports = function (
     );
   }
 
-  // Install react and react-dom for backward compatibility with old CRA cli
+  // Install react and react-dom for backward compatibility with old LAB cli
   // which doesn't install react and react-dom along with react-scripts
   if (!isReactInstalled(appPackage)) {
     args = args.concat(['react', 'react-dom']);
